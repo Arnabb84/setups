@@ -31,6 +31,9 @@ Conda commands executed.
 6) The TF version doesn't work with the default version of numpy, so change it to this version. 
 >> conda install numpy=1.23.5
 
+6.1)
+>> conda install matplotlib -y
+
 7) Install opencv, conda is too slow for that. 
 >> pip install opencv-python
 
