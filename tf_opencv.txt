@@ -33,6 +33,7 @@ Conda commands executed.
 
 6.1)
 >> conda install matplotlib -y
+>> conda install pandas -y
 
 7) Install opencv, conda is too slow for that. 
 >> pip install opencv-python
