@@ -1,0 +1,51 @@
+Pre-requisite
+-----------------------
+TMUX
+>> sudo apt install tmux
+>> tmux list-sessions
+>> tmux attach -t 1
+
+Conda commands-
+>> conda list --revisions
+Conda commands executed.
+>> grep -B1 "^# cmd" ${CONDA_PREFIX}/conda-meta/history
+>> conda deactivate
+
+1) Download and install Anaconda
+  >> wget https://repo.anaconda.com/archive/Anaconda3-2023.07-2-Linux-x86_64.sh
+  >> chmod +x Anaconda3-2023.07-2-Linux-x86_64.sh
+  >> ./Anaconda3-2023.07-2-Linux-x86_64.sh
+
+2) Update conda
+>> conda update --all
+
+3) Create a new env and keep python 3.9
+>> conda create --name tf python=3.9
+
+4) Activate conda
+>> conda activate tf
+
+5) Install tensorflow-gpu 
+>> conda install tensorflow-gpu
+
+6) The TF version doesn't work with the default version of numpy, so change it to this version. 
+>> conda install numpy=1.23.5
+
+7) Install opencv, conda is too slow for that. 
+>> pip install opencv-python
+
+8) Install ipykernel in the conda env 
+>> conda install -c anaconda ipykernel
+
+9) Export the conda kernel 
+python -m ipykernel install --user --name=tf
+
+Run jupyter notebook remotely-
+1) In the Remote machine run Jupypter notebook headless
+>> jupyter notebook --no-browser --port=8081
+
+2) In the Local machine do Port forwarding
+ssh -L 8081:localhost:8081 administrator@10.78.254.15
+
+3) In Local machine browser run 
+http://127.0.0.1:8081
