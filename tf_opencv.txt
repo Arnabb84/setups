@@ -5,6 +5,7 @@ TMUX
 >> tmux list-sessions
 >> tmux attach -t 1
 
+
 Conda commands-
 >> conda list --revisions
 Conda commands executed.
@@ -34,6 +35,7 @@ Conda commands executed.
 6.1)
 >> conda install matplotlib -y
 >> conda install pandas -y
+>> conda install tqdm -y
 
 7) Install opencv, conda is too slow for that. 
 >> pip install opencv-python
